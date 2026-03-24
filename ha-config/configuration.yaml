@@ -7,8 +7,7 @@ homekit:
       include_domains:
         - switch
 
-      include_entities:
-        - media_player.lg_webos_tv_43uj6510_sa
+      include_entities: []
       exclude_entities:
         - switch.dormitorio_interruptor_2
         - switch.oficina_interruptor_1
@@ -17,6 +16,13 @@ homekit:
         - switch.centro_salon_interruptor_2
         - switch.salon_interruptor_1
         - switch.salon_interruptor_2
+
+  - name: LG TV
+    port: 21064
+    mode: accessory
+    filter:
+      include_entities:
+        - media_player.lg_webos_tv_43uj6510_sa
 automation: !include automations.yaml
 
 wake_on_lan:
