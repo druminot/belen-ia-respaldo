@@ -1,0 +1,22 @@
+script: !include scripts.yaml
+
+homekit:
+  - name: Home Assistant Bridge
+    port: 21063
+    filter:
+      include_domains:
+        - switch
+
+      include_entities:
+        - media_player.lg_webos_tv_43uj6510_sa
+      exclude_entities:
+        - switch.dormitorio_interruptor_2
+        - switch.oficina_interruptor_1
+        - switch.oficina_interruptor_2
+        - switch.centro_salon_interruptor_1
+        - switch.centro_salon_interruptor_2
+        - switch.salon_interruptor_1
+        - switch.salon_interruptor_2
+automation: !include automations.yaml
+
+wake_on_lan:

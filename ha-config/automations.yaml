@@ -1,0 +1,125 @@
+- id: lg_homekit_remote_up
+  alias: LG Remote UP
+  trigger:
+    - platform: event
+      event_type: homekit_tv_remote_key_pressed
+      event_data:
+        key_name: arrow_up
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+  action:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: UP
+
+- id: lg_homekit_remote_down
+  alias: LG Remote DOWN
+  trigger:
+    - platform: event
+      event_type: homekit_tv_remote_key_pressed
+      event_data:
+        key_name: arrow_down
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+  action:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: DOWN
+
+- id: lg_homekit_remote_left
+  alias: LG Remote LEFT
+  trigger:
+    - platform: event
+      event_type: homekit_tv_remote_key_pressed
+      event_data:
+        key_name: arrow_left
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+  action:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: LEFT
+
+- id: lg_homekit_remote_right
+  alias: LG Remote RIGHT
+  trigger:
+    - platform: event
+      event_type: homekit_tv_remote_key_pressed
+      event_data:
+        key_name: arrow_right
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+  action:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: RIGHT
+
+- id: lg_homekit_remote_select
+  alias: LG Remote SELECT
+  trigger:
+    - platform: event
+      event_type: homekit_tv_remote_key_pressed
+      event_data:
+        key_name: select
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+  action:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: ENTER
+
+- id: lg_homekit_remote_back
+  alias: LG Remote BACK
+  trigger:
+    - platform: event
+      event_type: homekit_tv_remote_key_pressed
+      event_data:
+        key_name: back
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+  action:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: BACK
+
+- id: lg_homekit_remote_exit
+  alias: LG Remote EXIT
+  trigger:
+    - platform: event
+      event_type: homekit_tv_remote_key_pressed
+      event_data:
+        key_name: exit
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+  action:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: EXIT
+
+- id: lg_homekit_remote_info
+  alias: LG Remote INFO
+  trigger:
+    - platform: event
+      event_type: homekit_tv_remote_key_pressed
+      event_data:
+        key_name: information
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+  action:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: HOME
+
+- id: lg_tv_turn_on_wol
+  alias: "LG TV - Encender via WoL"
+  trigger:
+    - platform: event
+      event_type: call_service
+      event_data:
+        domain: media_player
+        service: turn_on
+  action:
+    - service: wake_on_lan.send_magic_packet
+      data:
+        mac: "a0:6f:aa:b9:bd:38"
+        broadcast_address: "192.168.1.255"

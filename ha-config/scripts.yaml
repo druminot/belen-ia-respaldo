@@ -1,0 +1,55 @@
+lg_arriba:
+  alias: "LG Arriba"
+  sequence:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: UP
+
+lg_abajo:
+  alias: "LG Abajo"
+  sequence:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: DOWN
+
+lg_izquierda:
+  alias: "LG Izquierda"
+  sequence:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: LEFT
+
+lg_derecha:
+  alias: "LG Derecha"
+  sequence:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: RIGHT
+
+lg_ok:
+  alias: "LG OK"
+  sequence:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: ENTER
+
+lg_atras:
+  alias: "LG Atras"
+  sequence:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: BACK
+
+lg_home:
+  alias: "LG Home"
+  sequence:
+    - service: webostv.button
+      data:
+        entity_id: media_player.lg_webos_tv_43uj6510_sa
+        button: HOME
