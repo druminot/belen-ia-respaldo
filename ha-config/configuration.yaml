@@ -1,3 +1,6 @@
+homeassistant:
+  customize: !include customize.yaml
+
 script: !include scripts.yaml
 
 homekit:
@@ -9,13 +12,29 @@ homekit:
 
       include_entities: []
       exclude_entities:
+        - switch.dormitorio_interruptor_1
         - switch.dormitorio_interruptor_2
+        - switch.dormitorio_interruptor_3
         - switch.oficina_interruptor_1
         - switch.oficina_interruptor_2
+        - switch.oficina_interruptor_3
         - switch.centro_salon_interruptor_1
         - switch.centro_salon_interruptor_2
+        - switch.centro_salon_interruptor_3
+        - switch.dormitorio_dormitorio_2
+        - switch.oficina_oficina_1
+        - switch.oficina_oficina_2
+        - switch.salon_salon_1
+        - switch.salon_salon_2
+        - switch.centro_salon_centro_salon_1
+        - switch.centro_salon_centro_salon_2
         - switch.salon_interruptor_1
         - switch.salon_interruptor_2
+        - switch.salon_interruptor_3
+        - switch.encimera_lavadora_bloqueo_infantil
+        - switch.monitor_mac_enchufe_1
+        - switch.encimera_lavadora_encimera_lavadora
+        - switch.casa_medidor_casa_medidor_switch
 
   - name: LG TV
     port: 21064

@@ -1,0 +1,2 @@
+switch.monitor_mac_monitor_mac:
+  device_class: outlet
